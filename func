@@ -1,0 +1,109 @@
+// CFG
+digraph {
+	<no.No object at 0x7f7d51dba0d0> [label="func
+L: 1
+def func(a):" color=darkgreen]
+	<no.No object at 0x7f7d51dba110> [label="TryExcept
+L: 3
+try:" color=darkgreen]
+	<no.No object at 0x7f7d51dba190> [label="With
+L: 4
+with open(a, \"w\") as f:" color=darkgreen]
+	<no.No object at 0x7f7d51dba1d0> [label="Assign
+L: 5
+b = f.readline()"]
+	<no.No object at 0x7f7d51dba210> [label="Except
+L: 6
+except FileNotFoundError:" color=darkgreen]
+	<no.No object at 0x7f7d51dba250> [label="Print
+L: 7
+print(\"File not found or could not be loaded\")"]
+	<no.No object at 0x7f7d51dba2d0> [label="Except
+L: 8
+except:"]
+	<no.No object at 0x7f7d51dba350> [label="Print
+L: 9
+print(\"File not found or could not be loaded\")"]
+	<no.No object at 0x7f7d51dba290> [label="Finally
+L: 3
+try:" color=darkgreen]
+	<no.No object at 0x7f7d51dba390> [label="Assign
+L: 12
+passnum = len(b) - 1" color=darkgreen]
+	<no.No object at 0x7f7d51dba3d0> [label="While
+L: 13
+while passnum > 0 and exchanges:" color=darkgreen]
+	<no.No object at 0x7f7d51dba410> [label="Assign
+L: 14
+exchanges = False" color=darkgreen]
+	<no.No object at 0x7f7d51dba450> [label="For
+L: 15
+for i in range(passnum):" color=darkgreen]
+	<no.No object at 0x7f7d51dacbd0> [label="If
+L: 16
+if b[i] > b[i + 1]:" color=darkgreen]
+	<no.No object at 0x7f7d51dacc10> [label="Assign
+L: 20
+b[i + 1] = temp" color=darkgreen]
+	<no.No object at 0x7f7d51dacc50> [label="orelseVazioIf
+L: 16
+if b[i] > b[i + 1]:" color=darkgreen]
+	<no.No object at 0x7f7d51dba310> [label="Assign
+L: 21
+passnum = passnum - 1" color=darkgreen]
+	<no.No object at 0x7f7d51dacb90> [label="Return
+L: 22
+return b" color=darkgreen style=bold]
+	<no.No object at 0x7f7d51dba0d0> -> <no.No object at 0x7f7d51dba110> [color=darkgreen]
+	<no.No object at 0x7f7d51dba110> -> <no.No object at 0x7f7d51dba190> [color=darkgreen]
+	<no.No object at 0x7f7d51dba190> -> <no.No object at 0x7f7d51dba1d0>
+	<no.No object at 0x7f7d51dba1d0> -> <no.No object at 0x7f7d51dba210> [style=dashed]
+	<no.No object at 0x7f7d51dba210> -> <no.No object at 0x7f7d51dba250>
+	<no.No object at 0x7f7d51dba1d0> -> <no.No object at 0x7f7d51dba2d0> [style=dashed]
+	<no.No object at 0x7f7d51dba2d0> -> <no.No object at 0x7f7d51dba350>
+	<no.No object at 0x7f7d51dba350> -> <no.No object at 0x7f7d51dba290>
+	<no.No object at 0x7f7d51dba250> -> <no.No object at 0x7f7d51dba290>
+	<no.No object at 0x7f7d51dba290> -> <no.No object at 0x7f7d51dba390> [color=darkgreen]
+	<no.No object at 0x7f7d51dba390> -> <no.No object at 0x7f7d51dba3d0> [color=darkgreen]
+	<no.No object at 0x7f7d51dba310> -> <no.No object at 0x7f7d51dba3d0> [color=darkgreen]
+	<no.No object at 0x7f7d51dba3d0> -> <no.No object at 0x7f7d51dba410> [color=darkgreen]
+	<no.No object at 0x7f7d51dba410> -> <no.No object at 0x7f7d51dba450> [color=darkgreen]
+	<no.No object at 0x7f7d51dacc50> -> <no.No object at 0x7f7d51dba450> [color=darkgreen]
+	<no.No object at 0x7f7d51dacc10> -> <no.No object at 0x7f7d51dba450> [color=darkgreen]
+	<no.No object at 0x7f7d51dba450> -> <no.No object at 0x7f7d51dacbd0> [color=darkgreen]
+	<no.No object at 0x7f7d51dacbd0> -> <no.No object at 0x7f7d51dacc10> [color=darkgreen]
+	<no.No object at 0x7f7d51dacbd0> -> <no.No object at 0x7f7d51dacc50> [color=darkgreen]
+	<no.No object at 0x7f7d51dacc10> -> <no.No object at 0x7f7d51dba310> [color=darkgreen]
+	<no.No object at 0x7f7d51dacc50> -> <no.No object at 0x7f7d51dba310> [color=darkgreen]
+	<no.No object at 0x7f7d51dba310> -> <no.No object at 0x7f7d51dacb90> [color=darkgreen]
+	"Cobertura por nos: 
+ 0.778" [shape=box]
+	"Cobertura por arestas: 
+ 0.682" [shape=box]
+	"Source code: 
+	def func(a):
+    b = a
+    try:
+        with open(a, \"w\") as f:
+            b = f.readline()
+    except FileNotFoundError:
+        print(\"File not found or could not be loaded\")
+    except:
+        print(\"File not found or could not be loaded\")
+    finally:
+        exchanges = True
+        passnum = len(b) - 1
+        while passnum > 0 and exchanges:
+            exchanges = False
+            for i in range(passnum):
+                if b[i] > b[i + 1]:
+                    exchanges = True
+                    temp = b[i]
+                    b[i] = b[i + 1]
+                    b[i + 1] = temp
+            passnum = passnum - 1
+        return b
+" [shape=box]
+	"Test results:
+	 " [shape=box]
+}

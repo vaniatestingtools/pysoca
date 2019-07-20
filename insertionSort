@@ -1,0 +1,66 @@
+// CFG
+digraph {
+	<no.No object at 0x7f012f6a5810> [label="insertionSort
+L: 1
+def insertionSort(arr):" color=darkgreen]
+	<no.No object at 0x7f012f6a5890> [label="For
+L: 3
+for i in range(1, len(arr)):" color=darkgreen]
+	<no.No object at 0x7f012f6a5950> [label="Assign
+L: 9
+j = i - 1" color=darkgreen]
+	<no.No object at 0x7f012f6a5990> [label="While
+L: 10
+while j >= 0 and key < arr[j]:" color=darkgreen]
+	<no.No object at 0x7f012f6a59d0> [label="AugAssign
+L: 12
+j -= 1"]
+	<no.No object at 0x7f012f6a5910> [label="Assign
+L: 13
+arr[j + 1] = key" color=darkgreen]
+	<no.No object at 0x7f012f6a5a10> [label="Return
+L: 14
+return arr" color=darkgreen style=bold]
+	<no.No object at 0x7f012f6a5a50> [label="While
+L: 15
+while j >= 0 and key < arr[j]:" color=red]
+	<no.No object at 0x7f012f6a58d0> [label="AugAssign
+L: 17
+j -= 1"]
+	<no.No object at 0x7f012f6a5810> -> <no.No object at 0x7f012f6a5890> [color=darkgreen]
+	<no.No object at 0x7f012f6a5910> -> <no.No object at 0x7f012f6a5890> [color=darkgreen]
+	<no.No object at 0x7f012f6a5890> -> <no.No object at 0x7f012f6a5950> [color=darkgreen]
+	<no.No object at 0x7f012f6a5950> -> <no.No object at 0x7f012f6a5990> [color=darkgreen]
+	<no.No object at 0x7f012f6a59d0> -> <no.No object at 0x7f012f6a5990>
+	<no.No object at 0x7f012f6a5990> -> <no.No object at 0x7f012f6a59d0>
+	<no.No object at 0x7f012f6a59d0> -> <no.No object at 0x7f012f6a5910>
+	<no.No object at 0x7f012f6a5910> -> <no.No object at 0x7f012f6a5a10> [color=darkgreen]
+	<no.No object at 0x7f012f6a5a10> -> <no.No object at 0x7f012f6a5a50> [color=red style=dotted]
+	<no.No object at 0x7f012f6a58d0> -> <no.No object at 0x7f012f6a5a50> [color=red style=dotted]
+	<no.No object at 0x7f012f6a5a50> -> <no.No object at 0x7f012f6a58d0> [color=red style=dotted]
+	"Cobertura por nos: 
+ 0.667" [shape=box]
+	"Cobertura por arestas: 
+ 0.625" [shape=box]
+	"Source code: 
+	def insertionSort(arr):
+    # Traverse through 1 to len(arr)
+    for i in range(1, len(arr)):
+
+        key = arr[i]
+        # Move elements of arr[0..i-1], that are
+        # greater than key, to one position ahead
+        # of their current position
+        j = i - 1
+        while j >= 0 and key < arr[j]:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
+    return arr
+    while j >= 0 and key < arr[j]:
+        arr[j + 1] = arr[j]
+        j -= 1
+" [shape=box]
+	"Test results:
+	 " [shape=box]
+}

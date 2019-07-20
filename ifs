@@ -1,0 +1,65 @@
+// CFG
+digraph {
+	<no.No object at 0x7f8fdab28a90> [label="ifs
+L: 1
+def ifs(a):" color=darkgreen]
+	<no.No object at 0x7f8fdab28950> [label="For
+L: 3
+for i in (0,a+1):" color=darkgreen]
+	<no.No object at 0x7f8fdab28850> [label="If
+L: 4
+if a>3:" color=darkgreen]
+	<no.No object at 0x7f8fdab28610> [label="Return
+L: 5
+return 1"]
+	<no.No object at 0x7f8fdab28710> [label="orelseVazioIf
+L: 4
+if a>3:" color=darkgreen]
+	<no.No object at 0x7f8fdab28810> [label="If
+L: 6
+if a<3:" color=darkgreen]
+	<no.No object at 0x7f8fdab28490> [label="Return
+L: 7
+return 0"]
+	<no.No object at 0x7f8fdab28590> [label="orelseVazioIf
+L: 6
+if a<3:" color=darkgreen]
+	<no.No object at 0x7f8fdab28890> [label="If
+L: 8
+if a ==3:" color=darkgreen]
+	<no.No object at 0x7f8fdab28410> [label="Return
+L: 9
+return 6" color=darkgreen style=bold]
+	<no.No object at 0x7f8fdab287d0> [label="orelseVazioIf
+L: 8
+if a ==3:" color=darkgreen]
+	<no.No object at 0x7f8fdab28a90> -> <no.No object at 0x7f8fdab28950> [color=darkgreen]
+	<no.No object at 0x7f8fdab28710> -> <no.No object at 0x7f8fdab28950> [color=darkgreen]
+	<no.No object at 0x7f8fdab28590> -> <no.No object at 0x7f8fdab28950> [color=darkgreen]
+	<no.No object at 0x7f8fdab28950> -> <no.No object at 0x7f8fdab28850> [color=darkgreen]
+	<no.No object at 0x7f8fdab28850> -> <no.No object at 0x7f8fdab28610>
+	<no.No object at 0x7f8fdab28850> -> <no.No object at 0x7f8fdab28710> [color=darkgreen]
+	<no.No object at 0x7f8fdab28710> -> <no.No object at 0x7f8fdab28810> [color=darkgreen]
+	<no.No object at 0x7f8fdab28810> -> <no.No object at 0x7f8fdab28490>
+	<no.No object at 0x7f8fdab28810> -> <no.No object at 0x7f8fdab28590> [color=darkgreen]
+	<no.No object at 0x7f8fdab28590> -> <no.No object at 0x7f8fdab28890> [color=darkgreen]
+	<no.No object at 0x7f8fdab28890> -> <no.No object at 0x7f8fdab28410> [color=darkgreen]
+	<no.No object at 0x7f8fdab28890> -> <no.No object at 0x7f8fdab287d0> [color=darkgreen]
+	"Cobertura por nos: 
+ 0.818" [shape=box]
+	"Cobertura por arestas: 
+ 0.833" [shape=box]
+	"Source code: 
+	def ifs(a):
+    print('asfd')
+    for i in (0,a+1):
+        if a>3:
+            return 1
+        if a<3:
+            return 0
+    if a ==3:
+        return 6
+" [shape=box]
+	"Test results:
+	 " [shape=box]
+}

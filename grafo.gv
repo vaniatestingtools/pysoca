@@ -1,0 +1,77 @@
+// CFG
+digraph {
+	<no.No object at 0x7fd7982537d0> [label="shortBubbleSort
+L: 1
+def shortBubbleSort(alist):" color=darkgreen]
+	<no.No object at 0x7fd798253890> [label="While
+L: 4
+while passnum > 0 and exchanges:" color=darkgreen]
+	<no.No object at 0x7fd798253910> [label="Assign
+L: 5
+exchanges = False" color=darkgreen]
+	<no.No object at 0x7fd798253950> [label="For
+L: 6
+for i in range(passnum):" color=darkgreen]
+	<no.No object at 0x7fd7982539d0> [label="If
+L: 7
+if alist[i]>alist[i+1]:" color=darkgreen]
+	<no.No object at 0x7fd798253a10> [label="Assign
+L: 11
+alist[i+1] = temp"]
+	<no.No object at 0x7fd798253a50> [label="orelseVazioIf
+L: 7
+if alist[i]>alist[i+1]:" color=darkgreen]
+	<no.No object at 0x7fd7982538d0> [label="Assign
+L: 12
+passnum = passnum-1" color=darkgreen]
+	<no.No object at 0x7fd798253990> [label="Return
+L: 13
+return alist" color=darkgreen style=bold]
+	<no.No object at 0x7fd7982537d0> -> <no.No object at 0x7fd798253890> [color=darkgreen]
+	<no.No object at 0x7fd7982538d0> -> <no.No object at 0x7fd798253890> [color=darkgreen]
+	<no.No object at 0x7fd798253890> -> <no.No object at 0x7fd798253910> [color=darkgreen]
+	<no.No object at 0x7fd798253910> -> <no.No object at 0x7fd798253950> [color=darkgreen]
+	<no.No object at 0x7fd798253a50> -> <no.No object at 0x7fd798253950> [color=darkgreen]
+	<no.No object at 0x7fd798253a10> -> <no.No object at 0x7fd798253950>
+	<no.No object at 0x7fd798253950> -> <no.No object at 0x7fd7982539d0> [color=darkgreen]
+	<no.No object at 0x7fd7982539d0> -> <no.No object at 0x7fd798253a10>
+	<no.No object at 0x7fd7982539d0> -> <no.No object at 0x7fd798253a50> [color=darkgreen]
+	<no.No object at 0x7fd798253a10> -> <no.No object at 0x7fd7982538d0>
+	<no.No object at 0x7fd798253a50> -> <no.No object at 0x7fd7982538d0> [color=darkgreen]
+	<no.No object at 0x7fd7982538d0> -> <no.No object at 0x7fd798253990> [color=darkgreen]
+	"Cobertura por nos: 
+ 0.889" [shape=box]
+	"Cobertura por arestas: 
+ 0.75" [shape=box]
+	"Source code: 
+	def shortBubbleSort(alist):
+    exchanges = True
+    passnum = len(alist)-1
+    while passnum > 0 and exchanges:
+       exchanges = False
+       for i in range(passnum):
+           if alist[i]>alist[i+1]:
+               exchanges = True
+               temp = alist[i]
+               alist[i] = alist[i+1]
+               alist[i+1] = temp
+       passnum = passnum-1
+    return alist
+" [shape=box]
+	"Test results:
+	 ======================================================================
+ test_shortBubbleSort (__main__.TestMyFunctions)Traceback (most recent call last):
+  File \"/home/jean/python-cfg/test.py\", line 11, in test_shortBubbleSort
+    self.assertEqual(func(inputdado), outputesperado)
+AssertionError: Lists differ: [] != [5, 6]
+
+Second list contains 2 additional elements.
+First extra element 0:
+5
+
+- []
++ [5, 6]
+ 
+----------------------------------------------------------------------
+" [shape=box]
+}
